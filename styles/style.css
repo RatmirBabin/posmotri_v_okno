@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -90,7 +92,6 @@ ol {
   position: relative;
   inline-size: 711px;
   block-size: 386px;
-  margin-block-end: 16px;
 }
 
 .result__video {
@@ -110,7 +111,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -136,7 +137,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-color: currentColor;
+  border-color: 1px solid currentColor;
 }
 
 .search-form__label {
@@ -148,12 +149,9 @@ ol {
   font-size: 18px;
 }
 
-.search-form__label:focus {
-  outline: none;
-}
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -174,9 +172,6 @@ ol {
   justify-content: center;
 }
 
-.search-form__checkbox:checked {
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   inline-size: 15px;
@@ -186,6 +181,7 @@ ol {
 
 .button {
   font-size: inherit;
+  min-height: 34px;
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
@@ -200,12 +196,12 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #ffffff;
+  outline-offset: -3px;
 }
 
 .search-form__submit-button {
   align-self: end;
   min-width: 194px;
-  min-height: 34px;
 }
 
 .button:hover {
@@ -217,10 +213,7 @@ ol {
 }
 
 .more-button {
-  font-size: 18px;
-  height: 34px;
   width: 100%;
-  background-color: transparent;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -269,9 +262,6 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.content__video-card-description {
 }
 
 .content__video-card-description-container {
